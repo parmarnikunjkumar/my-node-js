@@ -1,0 +1,17 @@
+<div ng-controller="AppCtrl">
+  <h1>AddressBook App</h1>
+  <table class="table">
+    <thead>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="contact in contactList">
+      <td>{{contact.name}}</td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.number}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

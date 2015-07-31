@@ -1,0 +1,43 @@
+extends layout
+
+block pageTitle
+    .jumbotron
+        h2 DAS NA DAS
+        h2 AKSHAR BRAHMA
+        h4 then swadhyay-bhajan is a must.
+
+
+
+extends layout
+block pageContent
+    form(class="form-horizontal" id="prasangForm" action='/searchPrasang' method='post')
+        div(class="form-group")
+            label(class="col-xs-3") TEXT
+            div(class="col-xs-5")
+                input(class="form-control" type="text", name="text")
+        div(class="form-group")
+            label(class="col-xs-3") TAGS
+            div(class="col-xs-5")
+                input(class="form-control" type="text", name="tags")
+        div(class="form-group")
+            label(class="col-xs-3") MAIN CHARACHTER
+            div(class="col-xs-5")
+                input(class="form-control" type="text", name="main_charachter")
+        div(class="form-group")
+            label(class="col-xs-3" id="lang") LANGUAGE
+            div(class="col-xs-5")
+                select(name="lang" class="form-control" id="lang")
+                    option all
+                    option english
+                    option german
+                    option gujarati
+        div(class="form-group")
+            div(class="col-xs-2")
+                button( class="form-control" type="submit", class="btn btn-success") SEARCH
+
+        div(ng-controller)
+
+
+
+
+

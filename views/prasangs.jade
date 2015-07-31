@@ -1,0 +1,32 @@
+//
+   Created by nirdosh on 24.07.15.
+
+extends layout
+block pageContent
+   div
+      table(class="table table-bordered")
+         thead
+            tr
+               th INDEX
+               th TITLE
+
+         tbody
+            each item,i in data
+               - var index = i+parseInt(from)+1
+               tr
+               td= index
+
+               td
+                  a(href='/prasang?id='+item._id) #{item.fields.title}
+
+
+   div
+      - var nextFrom = parseInt(from)+parseInt(size)
+      - var prevFrom = parseInt(from)-parseInt(size)
+      - var prevDisp = (parseInt(from) === 0)
+
+      if prevDisp
+      else
+         a(href='/prasangs?from='+prevFrom+'&size='+size class="btn btn-info") PREV
+
+      a(href='/prasangs?from='+nextFrom+'&size='+size class="btn btn-info pull-right") NEXT

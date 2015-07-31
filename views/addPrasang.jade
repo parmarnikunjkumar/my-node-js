@@ -1,0 +1,89 @@
+//
+   Created by nirdosh on 24.07.15.
+
+extends layout
+
+block pageContent
+
+      form(class="form-horizontal" id="prasangForm" action='/submitPrasang' method='post')
+         div(class="form-group")
+            label(class="col-xs-3") TITLE
+            div(class="col-xs-5")
+               input(class="form-control" type="text", name="title")
+         div(class="form-group")
+            label(class="col-xs-3") MAIN CHARACHTER
+            div(class="col-xs-5")
+               input(class="form-control" type="text", name="main_charachter")
+         div(class="form-group")
+            label(class="col-xs-3") TAGS
+            div(class="col-xs-7")
+               table(class="table table-bordered")
+                  tr
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="sambandh")
+                           |  sambandh
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="mahima")
+                           |  mahima
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="dasatva")
+                           |  dasatva
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="bhakti")
+                           |  bhakti
+                  tr
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="seva")
+                           |  seva
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="karuna")
+                           |  karuna
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="nistha")
+                           |  nistha
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="nirdoshbuddhi")
+                           |  nirdoshbuddhi
+                  tr
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="swadharma")
+                           |  swadharma
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="suruchi")
+                           | suruchi
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="inspirational")
+                           |  inspirational
+                     td
+                        label
+                           input(type="checkbox" name="tags" value="positive-thinking")
+                           |  positive-thinking
+
+
+
+
+         div(class="form-group")
+            label(class="col-xs-3" id="lang") LANGUAGE
+            div(class="col-xs-5")
+               select(name="lang" class="form-control" id="lang")
+                  option english
+                  option german
+                  option gujarati
+         div(class="form-group")
+            label(class="col-xs-3") CONTENT
+            div(class="col-xs-8")
+               textarea(class="form-control" rows="10" name="content")
+         div(class="form-group")
+            div(class="col-xs-5")
+               button( type="submit", class="btn btn-success") ADD

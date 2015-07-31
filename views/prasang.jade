@@ -1,0 +1,19 @@
+//
+   Created by nirdosh on 25.07.15.
+
+
+extends layout
+block pageContent
+   each item,i in prasang
+      h3 #{item._source.title}
+      p #{item._source.body}
+      - var id = item._id;
+      a( class="btn btn-info" href='/editPrasang?id='+id ) EDIT
+      a(class="btn btn-danger pull-right" href='/deletePrasang?id='+id) DELETE
+
+
+   //a(href='/editPrasang?id='+item._source._id class="btn btn-danger pull-right") EDIT
+   //a(href='/deletePrasang?id='+item._source._id class="btn btn-danger pull-right") DELETE
+
+
+

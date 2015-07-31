@@ -1,0 +1,34 @@
+//
+   Created by nirdosh on 25.07.15.
+
+extends  layout
+block pageContent
+   each item,i in prasang
+      form(class="form-horizontal" id="prasangForm" action='/updatePrasang?id='+item._id method='post')
+
+         div(class="form-group")
+            label(class="col-xs-3") TITLE
+            div(class="col-xs-5")
+               input(class="form-control" type="text", name="title", value= item._source.title)
+         div(class="form-group")
+            label(class="col-xs-3") TAGS
+            div(class="col-xs-5")
+               input(class="form-control" type="text", name="tags", value= item._source.tags)
+         div(class="form-group")
+            label(class="col-xs-3") MAIN CHARACHTER
+            div(class="col-xs-5")
+               input(class="form-control" type="text", name="main_charachter", value=item._source.main_charachter)
+         div(class="form-group")
+            label(class="col-xs-3" id="lang") LANGUAGE
+            div(class="col-xs-5")
+               select(name="language" class="form-control" id="lang")
+                  option(selected= item._source.language == 'english') english
+                  option(selected= item._source.language == 'german')  german
+                  option(selected= item._source.language == 'gujarati') gujarati
+         div(class="form-group")
+            label(class="col-xs-3") CONTENT
+            div(class="col-xs-8")
+               textarea(class="form-control" rows="10"  name="body") #{item._source.body}
+         div(class="form-group")
+            div(class="col-xs-5")
+               button( type="submit", class="btn btn-success") UPDATE

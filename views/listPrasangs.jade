@@ -1,0 +1,23 @@
+//
+   Created by nirdosh on 25.07.15.
+extends layout
+block pageContent
+   div
+      table(class="table table-bordered")
+         thead
+            tr
+               th INDEX
+               th TITLE
+
+         tbody
+            - var count= 1
+            each item,i in data
+               tr
+               td= i+1
+
+               td
+                  a(href='/prasang?id='+item._id) #{item.fields.title}
+
+
+
+

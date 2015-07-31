@@ -1,0 +1,17 @@
+<div ng-controller="PrasangCtrl">
+  <table class="table">
+    <thead>
+    <th>Title</th>
+    <th>Language</th>
+    <th>Tags</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="prasang in prasangList">
+      <td>{{prasang._source.title}}</td>
+      <td>{{prasang._source.language}}</td>
+      <td>{{prasang._source.tags}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div footer></div>
+</div>
