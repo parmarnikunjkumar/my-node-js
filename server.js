@@ -1,7 +1,6 @@
 /**
  * Created by nirdosh on 29.07.15.
  */
-
 var express = require('express');
 var app = express();
 var elasticsearch = require('elasticsearch');
