@@ -9,6 +9,7 @@ var client = new elasticsearch.Client({
   host:'localhost:9200'
 });
 
+
 app.use(express.static(__dirname+"/public"));
 
 app.get('/contactList',function(req,res){

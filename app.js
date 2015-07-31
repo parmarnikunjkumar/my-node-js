@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var BasicStrategy = require('passport-http').BasicStrategy;
 
-
 var routes = require('./routes/index');
 var prasang = require('./routes/prasang');
 
